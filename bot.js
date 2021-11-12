@@ -13,7 +13,7 @@ else {
 
 console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 
-bot.onText(/\/beba_xinchao (.+)/, (msg, match) => {
+bot.onText(/\/beba_xinchao/, (msg) => {
   // 'msg' is the received Message from Telegram
   // 'match' is the result of executing the regexp above on the text content
   // of the message
@@ -26,12 +26,5 @@ bot.onText(/\/beba_xinchao (.+)/, (msg, match) => {
         'test'
   });
 });
-
-// bot.on('message', (msg) => {
-//   const name = msg.from.username;
-//   bot.sendMessage(msg.chat.id, 'Xin chào anh/chị, ' + name + '!').then(() => {
-//     // reply sent!
-//   });
-// });
 
 module.exports = bot;
