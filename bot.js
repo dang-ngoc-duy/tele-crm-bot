@@ -18,14 +18,15 @@ bot.onText(/\/hi_beba/, (msg) => {
   const chatId = msg.chat.id;
 
   bot.sendMessage(chatId, 'Bé ba chào anh, ' + `@${user_name}` + '!').then(() => {});
+  bot.sendSticker(chatId, '<3').then(() => {});
 });
 
-bot.onText(/\/hi_beba/, (msg) => {
-  const user_name = msg.from.username;
-  const chatId = msg.chat.id;
+// bot.onText(/\/hi_beba/, (msg) => {
+//   const user_name = msg.from.username;
+//   const chatId = msg.chat.id;
 
-  bot.sendMessage(chatId, 'Bé ba chào anh, ' + `@${user_name}` + '!').then(() => {});
-});
-bot.sendSticker()
+//   bot.sendMessage(chatId, 'Bé ba chào anh, ' + `@${user_name}` + '!').then(() => {});
+// });
+
 
 module.exports = bot;
