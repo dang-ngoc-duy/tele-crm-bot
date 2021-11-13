@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
-  res.json({ version: packageInfo.version });
+  res.json({ version: packageInfo.version, status: 'Ok, bot đã chạy!' });
 });
 
 var server = app.listen(process.env.PORT, "0.0.0.0", () => {

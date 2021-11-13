@@ -13,18 +13,19 @@ else {
 
 console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 
-bot.onText(/\/beba_xinchao/, (msg) => {
-  // 'msg' is the received Message from Telegram
-  // 'match' is the result of executing the regexp above on the text content
-  // of the message
-
+bot.onText(/\/hi_beba/, (msg) => {
   const user_name = msg.from.username;
   const chatId = msg.chat.id;
 
-  // send back the matched "whatever" to the chat
-  bot.sendMessage(chatId, 'Bé ba chào anh, ' + user_name + '!').then(() => {
-        'test'
-  });
+  bot.sendMessage(chatId, 'Bé ba chào anh, ' + `@${user_name}` + '!').then(() => {});
 });
+
+bot.onText(/\/hi_beba/, (msg) => {
+  const user_name = msg.from.username;
+  const chatId = msg.chat.id;
+
+  bot.sendMessage(chatId, 'Bé ba chào anh, ' + `@${user_name}` + '!').then(() => {});
+});
+bot.sendSticker()
 
 module.exports = bot;

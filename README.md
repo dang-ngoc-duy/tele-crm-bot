@@ -1,2 +1,2 @@
 # tele-crm-bot
-[x] {+DONE+} Test issue (`file` - @duydangit - #123)
+[x] {+DONE+} Test issue (`test` - @duydangit - #123)
